@@ -153,7 +153,7 @@ public class TelaOrientador extends JFrame {
 				textField_4.setBounds(220, 92, 319, 57);
 				tabPerfil.add(textField_4);
 				
-				JLabel lblMatrias = new JLabel("Matérias");
+				JLabel lblMatrias = new JLabel("Disciplinas");
 				lblMatrias.setBounds(567, 77, 362, 17);
 				tabPerfil.add(lblMatrias);
 				
@@ -389,6 +389,7 @@ public class TelaOrientador extends JFrame {
 				tabPesquisa.add(textField_5);
 				
 				JButton btnRegras_1_2 = new JButton("");
+				btnRegras_1_2.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\lupa.png"));
 				btnRegras_1_2.setBounds(720, 34, 32, 32);
 				tabPesquisa.add(btnRegras_1_2);
 				
