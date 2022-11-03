@@ -163,7 +163,7 @@ public class Tela_Pag45 extends JFrame {
 		BancasNotas.add(lblNewLabel);
 		
 		textField = new JTextField();
-		textField.setBounds(124, 64, 158, 20);
+		textField.setBounds(152, 64, 158, 20);
 		BancasNotas.add(textField);
 		textField.setColumns(10);
 		
