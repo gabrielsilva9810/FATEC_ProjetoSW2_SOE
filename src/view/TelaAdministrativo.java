@@ -131,19 +131,19 @@ public class TelaAdministrativo extends JFrame {
 					public void actionPerformed(ActionEvent e) {
 					}
 				});
-				btnVnculos.setBounds(743, 287, 209, 32);
+				btnVnculos.setBounds(729, 287, 223, 32);
 				tabDash.add(btnVnculos);
 				
 				JButton btnInserirAlunos = new JButton("Inserir Alunos");
-				btnInserirAlunos.setBounds(743, 330, 209, 32);
+				btnInserirAlunos.setBounds(729, 330, 223, 32);
 				tabDash.add(btnInserirAlunos);
 				
 				JButton btnInserirProfessores = new JButton("Inserir Professores");
-				btnInserirProfessores.setBounds(743, 373, 209, 32);
+				btnInserirProfessores.setBounds(729, 373, 223, 32);
 				tabDash.add(btnInserirProfessores);
 				
-				JButton btnInserirFuncionrios = new JButton("Inserir Funcionários");
-				btnInserirFuncionrios.setBounds(743, 416, 209, 32);
+				JButton btnInserirFuncionrios = new JButton("Inserir Funcionários \\ Hist de Atividades");
+				btnInserirFuncionrios.setBounds(729, 416, 223, 32);
 				tabDash.add(btnInserirFuncionrios);
 				
 				JCheckBox chckbxNewCheckBox = new JCheckBox("Professor");
