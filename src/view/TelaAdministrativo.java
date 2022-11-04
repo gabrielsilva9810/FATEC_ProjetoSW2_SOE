@@ -159,7 +159,7 @@ public class TelaAdministrativo extends JFrame {
 				comboBox.setBounds(741, 115, 209, 22);
 				tabDash.add(comboBox);
 				
-				JLabel lblNewLabel = new JLabel("Filtro para Dash");
+				JLabel lblNewLabel = new JLabel("Filtro para Dashboard");
 				lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				lblNewLabel.setBounds(743, 29, 209, 14);
 				tabDash.add(lblNewLabel);
