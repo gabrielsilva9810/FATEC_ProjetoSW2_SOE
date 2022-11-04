@@ -23,6 +23,8 @@ import javax.swing.JProgressBar;
 import java.awt.SystemColor;
 import javax.swing.JSeparator;
 import javax.swing.JCheckBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaOrientadorVeAluno extends JFrame {	
 	
@@ -60,9 +62,6 @@ public class TelaOrientadorVeAluno extends JFrame {
 	private JLabel lblStatus_4;
 	private JLabel lblTemaDoTrabalho_4;
 	private JButton btnRegras;
-	private JTextField textField_16;
-	private JTextField textField_14;
-	private JTextField textField_15;
 	private JLabel lblTemaDoTrabalho_3;
 	private JTextField textField_22;
 	private JTextField textField_23;
@@ -70,6 +69,14 @@ public class TelaOrientadorVeAluno extends JFrame {
 	private JLabel lblStatus_2;
 	private JSeparator separator_3;
 	private JSeparator separator_4;
+	private JLabel lblPesquisarProfessoresPara;
+	private JButton btnRegras_1;
+	private JLabel lblTrilha;
+	private JLabel lblTrilha_1;
+	private JLabel lblTrilha_2;
+	private JTextArea textArea;
+	private JComboBox comboBox_2;
+	private JTextField textField_4;
 	
 // ====================================================================================================================================
 // ============================================================ TELA BASE =============================================================
@@ -297,7 +304,7 @@ public class TelaOrientadorVeAluno extends JFrame {
 				tabGrupo.add(textField_21);
 				
 				lblDescrioDoProjeto_1 = new JLabel("Descrição do projeto");
-				lblDescrioDoProjeto_1.setBounds(10, 205, 714, 32);
+				lblDescrioDoProjeto_1.setBounds(10, 138, 714, 32);
 				tabGrupo.add(lblDescrioDoProjeto_1);
 				
 				JLabel lblTipoDeProjeto = new JLabel("Tipo");
@@ -305,7 +312,7 @@ public class TelaOrientadorVeAluno extends JFrame {
 				tabGrupo.add(lblTipoDeProjeto);
 				
 				JLabel lblTrilha_3 = new JLabel("Progresso");
-				lblTrilha_3.setBounds(10, 390, 62, 51);
+				lblTrilha_3.setBounds(10, 224, 62, 51);
 				tabGrupo.add(lblTrilha_3);
 				
 				JLabel lblMembros = new JLabel("Membros");
@@ -336,11 +343,11 @@ public class TelaOrientadorVeAluno extends JFrame {
 				
 				textField_20 = new JTextField();
 				textField_20.setColumns(10);
-				textField_20.setBounds(840, 403, 119, 20);
+				textField_20.setBounds(840, 237, 119, 20);
 				tabGrupo.add(textField_20);
 				
 				lblStatus_4 = new JLabel("Data da última atualização");
-				lblStatus_4.setBounds(706, 403, 143, 25);
+				lblStatus_4.setBounds(706, 237, 143, 25);
 				tabGrupo.add(lblStatus_4);
 				
 				lblTemaDoTrabalho_4 = new JLabel("Membros da Banca");
@@ -348,23 +355,8 @@ public class TelaOrientadorVeAluno extends JFrame {
 				tabGrupo.add(lblTemaDoTrabalho_4);
 				
 				btnRegras = new JButton("Orientar / Deixar Orientação");
-				btnRegras.setBounds(753, 429, 206, 32);
+				btnRegras.setBounds(752, 263, 206, 32);
 				tabGrupo.add(btnRegras);
-				
-				textField_16 = new JTextField();
-				textField_16.setColumns(10);
-				textField_16.setBounds(10, 122, 479, 84);
-				tabGrupo.add(textField_16);
-				
-				textField_14 = new JTextField();
-				textField_14.setColumns(10);
-				textField_14.setBounds(685, 34, 274, 20);
-				tabGrupo.add(textField_14);
-				
-				textField_15 = new JTextField();
-				textField_15.setColumns(10);
-				textField_15.setBounds(512, 122, 447, 84);
-				tabGrupo.add(textField_15);
 				
 				lblTemaDoTrabalho_3 = new JLabel("Orientador");
 				lblTemaDoTrabalho_3.setBounds(10, 52, 119, 30);
@@ -377,23 +369,90 @@ public class TelaOrientadorVeAluno extends JFrame {
 				
 				textField_23 = new JTextField();
 				textField_23.setColumns(10);
-				textField_23.setBounds(10, 231, 949, 161);
+				textField_23.setBounds(10, 164, 949, 66);
 				tabGrupo.add(textField_23);
 				
 				textField_17 = new JTextField();
 				textField_17.setColumns(10);
-				textField_17.setBounds(577, 405, 119, 20);
+				textField_17.setBounds(577, 239, 119, 20);
 				tabGrupo.add(textField_17);
 				
 				lblStatus_2 = new JLabel("Status");
-				lblStatus_2.setBounds(534, 403, 143, 25);
+				lblStatus_2.setBounds(534, 237, 143, 25);
 				tabGrupo.add(lblStatus_2);
 				
 				JProgressBar progressBar = new JProgressBar();
 				progressBar.setStringPainted(true);
 				progressBar.setForeground(SystemColor.textHighlight);
-				progressBar.setBounds(66, 403, 457, 17);
+				progressBar.setBounds(66, 237, 457, 17);
 				tabGrupo.add(progressBar);
+				
+				JComboBox comboBox = new JComboBox();
+				comboBox.setBounds(10, 122, 478, 22);
+				tabGrupo.add(comboBox);
+				
+				JComboBox comboBox_1 = new JComboBox();
+				comboBox_1.setBounds(512, 122, 447, 22);
+				tabGrupo.add(comboBox_1);
+				
+				lblPesquisarProfessoresPara = new JLabel("Pesquisar Professores para Banca");
+				lblPesquisarProfessoresPara.setHorizontalAlignment(SwingConstants.CENTER);
+				lblPesquisarProfessoresPara.setFont(new Font("Tahoma", Font.PLAIN, 14));
+				lblPesquisarProfessoresPara.setBounds(10, 306, 755, 25);
+				tabGrupo.add(lblPesquisarProfessoresPara);
+				
+				btnRegras_1 = new JButton("");
+				btnRegras_1.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				btnRegras_1.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
+				btnRegras_1.setBounds(733, 316, 32, 32);
+				tabGrupo.add(btnRegras_1);
+				
+				lblTrilha = new JLabel("Nome");
+				lblTrilha.setHorizontalAlignment(SwingConstants.LEFT);
+				lblTrilha.setBounds(17, 361, 82, 25);
+				tabGrupo.add(lblTrilha);
+				
+				lblTrilha_1 = new JLabel("Cursos");
+				lblTrilha_1.setHorizontalAlignment(SwingConstants.CENTER);
+				lblTrilha_1.setBounds(519, 361, 82, 25);
+				tabGrupo.add(lblTrilha_1);
+				
+				lblTrilha_2 = new JLabel("Áreas que orienta");
+				lblTrilha_2.setHorizontalAlignment(SwingConstants.LEFT);
+				lblTrilha_2.setBounds(20, 393, 158, 25);
+				tabGrupo.add(lblTrilha_2);
+				
+				comboBox_2 = new JComboBox();
+				comboBox_2.setBounds(683, 33, 276, 22);
+				tabGrupo.add(comboBox_2);
+				
+				JSeparator separator = new JSeparator();
+				separator.setBounds(10, 303, 949, 10);
+				tabGrupo.add(separator);
+				
+				JButton btnLimpar_2 = new JButton("Convidar para Banca");
+				btnLimpar_2.setBounds(786, 316, 173, 32);
+				tabGrupo.add(btnLimpar_2);
+				
+				textField_4 = new JTextField();
+				textField_4.setColumns(10);
+				textField_4.setBounds(10, 328, 714, 20);
+				tabGrupo.add(textField_4);
+				
+				JSeparator separator_1 = new JSeparator();
+				separator_1.setBounds(20, 432, 918, 10);
+				tabGrupo.add(separator_1);
+				
+				JSeparator separator_1_1 = new JSeparator();
+				separator_1_1.setBounds(17, 391, 918, 10);
+				tabGrupo.add(separator_1_1);
+				
+				textArea = new JTextArea();
+				textArea.setBounds(10, 359, 949, 102);
+				tabGrupo.add(textArea);
 				//----------------------------------------------------------------------------------------------------------------------------				
 			}
 }

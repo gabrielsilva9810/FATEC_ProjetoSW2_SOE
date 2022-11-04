@@ -184,20 +184,12 @@ public class TelaCoordenador extends JFrame {
 				textField_11.setBounds(414, 168, 515, 20);
 				tabPerfil.add(textField_11);
 				
-				JButton btnGravar = new JButton("Alterar");
-				btnGravar.setBounds(465, 429, 110, 32);
-				tabPerfil.add(btnGravar);
-				
-				JButton btnExcluir = new JButton("Excluir");
-				btnExcluir.setBounds(585, 429, 110, 32);
-				tabPerfil.add(btnExcluir);
-				
-				JButton btnBuscar = new JButton("Buscar");
-				btnBuscar.setBounds(705, 429, 110, 32);
+				JButton btnBuscar = new JButton("Limpar");
+				btnBuscar.setBounds(493, 429, 110, 32);
 				tabPerfil.add(btnBuscar);
 				
 				JButton btnGravar_1 = new JButton("Gravar");
-				btnGravar_1.setBounds(825, 429, 110, 32);
+				btnGravar_1.setBounds(613, 429, 110, 32);
 				tabPerfil.add(btnGravar_1);
 				
 				JLabel lblTemaDoTrabalho = new JLabel("Formação");
@@ -206,15 +198,15 @@ public class TelaCoordenador extends JFrame {
 				
 				textField_12 = new JTextField();
 				textField_12.setColumns(10);
-				textField_12.setBounds(220, 223, 714, 72);
+				textField_12.setBounds(220, 223, 503, 72);
 				tabPerfil.add(textField_12);
 				
 				JLabel lblDescrioDoProjeto = new JLabel("Áreas para orientar");
-				lblDescrioDoProjeto.setBounds(220, 298, 714, 32);
+				lblDescrioDoProjeto.setBounds(220, 298, 503, 32);
 				tabPerfil.add(lblDescrioDoProjeto);
 				
 				JTextArea textArea_1 = new JTextArea();
-				textArea_1.setBounds(220, 323, 714, 95);
+				textArea_1.setBounds(220, 323, 503, 95);
 				tabPerfil.add(textArea_1);
 				
 				JLabel lblHorriosParaEncontrar = new JLabel("Horário do semestre");
@@ -256,6 +248,39 @@ public class TelaCoordenador extends JFrame {
 				List list_1_1 = new List();
 				list_1_1.setBounds(10, 239, 180, 182);
 				tabPerfil.add(list_1_1);
+				
+				JLabel lblTemaDoTrabalho_1 = new JLabel("Mensagens e Solicitações");
+				lblTemaDoTrabalho_1.setBounds(746, 199, 193, 17);
+				tabPerfil.add(lblTemaDoTrabalho_1);
+				
+				JButton btnRegras_1_2_2_2 = new JButton("");
+				btnRegras_1_2_2_2.setIcon(new ImageIcon("C:\\TEMP\\ConfirmV.png"));
+				btnRegras_1_2_2_2.setFont(new Font("Tahoma", Font.PLAIN, 5));
+				btnRegras_1_2_2_2.setBounds(865, 286, 26, 20);
+				tabPerfil.add(btnRegras_1_2_2_2);
+				
+				JButton btnRegras_1_2_3 = new JButton("");
+				btnRegras_1_2_3.setIcon(new ImageIcon("C:\\TEMP\\ConfirmX.png"));
+				btnRegras_1_2_3.setBounds(893, 286, 26, 20);
+				tabPerfil.add(btnRegras_1_2_3);
+				
+				JButton btnRegras_1_2_4 = new JButton("");
+				btnRegras_1_2_4.setIcon(new ImageIcon("C:\\TEMP\\ConfirmV.png"));
+				btnRegras_1_2_4.setBounds(865, 396, 26, 20);
+				tabPerfil.add(btnRegras_1_2_4);
+				
+				JButton btnRegras_1_2_5 = new JButton("");
+				btnRegras_1_2_5.setIcon(new ImageIcon("C:\\TEMP\\ConfirmX.png"));
+				btnRegras_1_2_5.setBounds(893, 396, 26, 20);
+				tabPerfil.add(btnRegras_1_2_5);
+				
+				JSeparator separator_3 = new JSeparator();
+				separator_3.setBounds(762, 328, 157, 2);
+				tabPerfil.add(separator_3);
+				
+				JTextArea textArea_3_1 = new JTextArea();
+				textArea_3_1.setBounds(746, 217, 186, 231);
+				tabPerfil.add(textArea_3_1);
 				
 				tabGrupos = new JPanel();
 				tabGrupos.setBackground(new Color(214, 220, 228));
@@ -384,20 +409,20 @@ public class TelaCoordenador extends JFrame {
 				textArea_2.setBounds(707, 42, 241, 368);
 				tabAgenda.add(textArea_2);
 				
-				JButton btnGravar_3 = new JButton("Gravar");
+				JButton btnGravar_3 = new JButton("Agendar");
 				btnGravar_3.setBounds(549, 429, 110, 32);
 				tabAgenda.add(btnGravar_3);
 				
 				JButton btnBuscar_1 = new JButton("Buscar");
-				btnBuscar_1.setBounds(429, 429, 110, 32);
+				btnBuscar_1.setBounds(838, 421, 110, 32);
 				tabAgenda.add(btnBuscar_1);
 				
 				JButton btnExcluir_1 = new JButton("Excluir");
-				btnExcluir_1.setBounds(309, 429, 110, 32);
+				btnExcluir_1.setBounds(429, 429, 110, 32);
 				tabAgenda.add(btnExcluir_1);
 				
 				JButton btnGravar_2 = new JButton("Alterar");
-				btnGravar_2.setBounds(189, 429, 110, 32);
+				btnGravar_2.setBounds(309, 429, 110, 32);
 				tabAgenda.add(btnGravar_2);
 				
 				tabPesquisa = new JPanel();

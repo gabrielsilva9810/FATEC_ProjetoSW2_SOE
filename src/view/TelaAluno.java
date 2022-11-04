@@ -23,6 +23,8 @@ import javax.swing.JProgressBar;
 import java.awt.SystemColor;
 import javax.swing.JSeparator;
 import javax.swing.JCheckBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaAluno extends JFrame {	
 	
@@ -57,18 +59,12 @@ public class TelaAluno extends JFrame {
 	private JTextField textField_12;
 	private JTextField textField_13;
 	private JLabel lblTemaDoTrabalho;
-	private JButton btnGravar;
-	private JButton btnExcluir;
 	private JButton btnBuscar;
 	private JButton btnGravar_1;
 	private JLabel LOGO_2;
 	private JTextArea textArea_2;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
-	private JButton btnGravar_2;
-	private JButton btnExcluir_1;
-	private JButton btnBuscar_1;
-	private JButton btnGravar_3;
 	private JTextArea textArea_3;
 	private JLabel lblTemaDoTrabalho_1;
 	private JLabel lblTemaDoTrabalho_2;
@@ -85,7 +81,6 @@ public class TelaAluno extends JFrame {
 	private JButton btnRegras;
 	private JButton btnGravar_4;
 	private JButton btnExcluir_2;
-	private JButton btnBuscar_2;
 	private JButton btnGravar_5;
 	private JTextField textField_16;
 	private JTextField textField_14;
@@ -97,6 +92,15 @@ public class TelaAluno extends JFrame {
 	private JLabel lblStatus_2;
 	private JSeparator separator_3;
 	private JSeparator separator_4;
+	private JButton btnGravar_2;
+	private JButton btnExcluir_1;
+	private JButton btnGravar_3;
+	private JButton btnBuscar_1;
+	private JButton btnRegras_1_2_2;
+	private JButton btnRegras_1_2_3;
+	private JButton btnRegras_1_2_4;
+	private JButton btnRegras_1_2_5;
+	private JSeparator separator_5;
 	
 // ====================================================================================================================================
 // ============================================================ TELA BASE =============================================================
@@ -282,15 +286,7 @@ public class TelaAluno extends JFrame {
 				textArea_1.setBounds(41, 274, 703, 137);
 				tabPerfil.add(textArea_1);
 				
-				btnGravar = new JButton("Alterar");
-				btnGravar.setBounds(274, 422, 110, 32);
-				tabPerfil.add(btnGravar);
-				
-				btnExcluir = new JButton("Excluir");
-				btnExcluir.setBounds(394, 422, 110, 32);
-				tabPerfil.add(btnExcluir);
-				
-				btnBuscar = new JButton("Buscar");
+				btnBuscar = new JButton("Limpar");
 				btnBuscar.setBounds(514, 422, 110, 32);
 				tabPerfil.add(btnBuscar);
 				
@@ -298,11 +294,7 @@ public class TelaAluno extends JFrame {
 				btnGravar_1.setBounds(634, 422, 110, 32);
 				tabPerfil.add(btnGravar_1);
 				
-				textArea_3 = new JTextArea();
-				textArea_3.setBounds(765, 231, 186, 218);
-				tabPerfil.add(textArea_3);
-				
-				lblTemaDoTrabalho_1 = new JLabel("Membros do grupo");
+				lblTemaDoTrabalho_1 = new JLabel("Mensagens e Solicitações");
 				lblTemaDoTrabalho_1.setBounds(765, 210, 193, 17);
 				tabPerfil.add(lblTemaDoTrabalho_1);
 				
@@ -329,6 +321,38 @@ public class TelaAluno extends JFrame {
 				separator_4 = new JSeparator();
 				separator_4.setBounds(241, 197, 709, 2);
 				tabPerfil.add(separator_4);
+				
+				btnRegras_1_2_2 = new JButton("");
+				btnRegras_1_2_2.setIcon(new ImageIcon("C:\\TEMP\\ConfirmV.png"));
+				btnRegras_1_2_2.setBounds(884, 307, 26, 20);
+				tabPerfil.add(btnRegras_1_2_2);
+				
+				btnRegras_1_2_3 = new JButton("");
+				btnRegras_1_2_3.setIcon(new ImageIcon("C:\\TEMP\\ConfirmX.png"));
+				btnRegras_1_2_3.setBounds(912, 307, 26, 20);
+				tabPerfil.add(btnRegras_1_2_3);
+				
+				btnRegras_1_2_4 = new JButton("");
+				btnRegras_1_2_4.setIcon(new ImageIcon("C:\\TEMP\\ConfirmV.png"));
+				btnRegras_1_2_4.setBounds(884, 417, 26, 20);
+				tabPerfil.add(btnRegras_1_2_4);
+				
+				btnRegras_1_2_5 = new JButton("");
+				btnRegras_1_2_5.setIcon(new ImageIcon("C:\\TEMP\\ConfirmX.png"));
+				btnRegras_1_2_5.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				btnRegras_1_2_5.setBounds(912, 417, 26, 20);
+				tabPerfil.add(btnRegras_1_2_5);
+				
+				separator_5 = new JSeparator();
+				separator_5.setBounds(775, 338, 164, 12);
+				tabPerfil.add(separator_5);
+				
+				textArea_3 = new JTextArea();
+				textArea_3.setBounds(765, 231, 186, 218);
+				tabPerfil.add(textArea_3);
 				
 				tabGrupo = new JPanel();
 				tabGrupo.setBackground(new Color(214, 220, 228));
@@ -359,10 +383,6 @@ public class TelaAluno extends JFrame {
 				JLabel lblMembros = new JLabel("Membros");
 				lblMembros.setBounds(10, 102, 119, 25);
 				tabGrupo.add(lblMembros);
-				
-				JButton btnRegras_1_1 = new JButton("Autorizar divulgar");
-				btnRegras_1_1.setBounds(840, 430, 119, 32);
-				tabGrupo.add(btnRegras_1_1);
 				
 				lblStatus_1 = new JLabel("Data de Apresentação");
 				lblStatus_1.setBounds(775, 60, 119, 25);
@@ -399,8 +419,12 @@ public class TelaAluno extends JFrame {
 				lblTemaDoTrabalho_4.setBounds(512, 106, 250, 17);
 				tabGrupo.add(lblTemaDoTrabalho_4);
 				
-				btnRegras = new JButton("Convidar Banca");
-				btnRegras.setBounds(676, 430, 144, 32);
+				btnRegras = new JButton("Autorizar divulgar");
+				btnRegras.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				btnRegras.setBounds(815, 430, 144, 32);
 				tabGrupo.add(btnRegras);
 				
 				btnGravar_4 = new JButton("Alterar");
@@ -411,12 +435,8 @@ public class TelaAluno extends JFrame {
 				btnExcluir_2.setBounds(184, 430, 144, 32);
 				tabGrupo.add(btnExcluir_2);
 				
-				btnBuscar_2 = new JButton("Buscar");
-				btnBuscar_2.setBounds(348, 430, 144, 32);
-				tabGrupo.add(btnBuscar_2);
-				
 				btnGravar_5 = new JButton("Gravar");
-				btnGravar_5.setBounds(512, 430, 144, 32);
+				btnGravar_5.setBounds(345, 430, 144, 32);
 				tabGrupo.add(btnGravar_5);
 				
 				textField_16 = new JTextField();
@@ -487,22 +507,6 @@ public class TelaAluno extends JFrame {
 				lblNewLabel_1.setBounds(697, 11, 241, 20);
 				tabAgenda.add(lblNewLabel_1);
 				
-				btnGravar_2 = new JButton("Alterar");
-				btnGravar_2.setBounds(179, 429, 110, 32);
-				tabAgenda.add(btnGravar_2);
-				
-				btnExcluir_1 = new JButton("Excluir");
-				btnExcluir_1.setBounds(299, 429, 110, 32);
-				tabAgenda.add(btnExcluir_1);
-				
-				btnBuscar_1 = new JButton("Buscar");
-				btnBuscar_1.setBounds(419, 429, 110, 32);
-				tabAgenda.add(btnBuscar_1);
-				
-				btnGravar_3 = new JButton("Gravar");
-				btnGravar_3.setBounds(539, 429, 110, 32);
-				tabAgenda.add(btnGravar_3);
-				
 				JSeparator separator_2 = new JSeparator();
 				separator_2.setBounds(710, 131, 218, 2);
 				tabAgenda.add(separator_2);
@@ -518,6 +522,22 @@ public class TelaAluno extends JFrame {
 				textArea_2 = new JTextArea();
 				textArea_2.setBounds(697, 42, 241, 368);
 				tabAgenda.add(textArea_2);
+				
+				btnGravar_2 = new JButton("Alterar");
+				btnGravar_2.setBounds(299, 429, 110, 32);
+				tabAgenda.add(btnGravar_2);
+				
+				btnExcluir_1 = new JButton("Excluir");
+				btnExcluir_1.setBounds(419, 429, 110, 32);
+				tabAgenda.add(btnExcluir_1);
+				
+				btnGravar_3 = new JButton("Agendar");
+				btnGravar_3.setBounds(539, 429, 110, 32);
+				tabAgenda.add(btnGravar_3);
+				
+				btnBuscar_1 = new JButton("Buscar");
+				btnBuscar_1.setBounds(828, 421, 110, 32);
+				tabAgenda.add(btnBuscar_1);
 				
 				tabPesquisa = new JPanel();
 				tabPesquisa.setBackground(new Color(214, 220, 228));

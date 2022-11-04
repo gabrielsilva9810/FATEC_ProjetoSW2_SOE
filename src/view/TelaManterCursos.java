@@ -109,7 +109,7 @@ public class TelaManterCursos extends JFrame {
 		contentPane.add(labelAmarelaTOP);
 		
 		Nome = new JTextField();
-		Nome.setBounds(68, 160, 437, 20);
+		Nome.setBounds(68, 160, 398, 20);
 		contentPane.add(Nome);
 		Nome.setColumns(10);
 		
@@ -134,16 +134,12 @@ public class TelaManterCursos extends JFrame {
 		contentPane.add(lblPerodo);
 		
 		JButton btnGravar_1 = new JButton("Alterar");
-		btnGravar_1.setBounds(495, 569, 110, 32);
+		btnGravar_1.setBounds(615, 569, 110, 32);
 		contentPane.add(btnGravar_1);
 		
 		JButton btnExcluir = new JButton("Excluir");
-		btnExcluir.setBounds(615, 569, 110, 32);
+		btnExcluir.setBounds(735, 569, 110, 32);
 		contentPane.add(btnExcluir);
-		
-		JButton btnBuscar = new JButton("Buscar");
-		btnBuscar.setBounds(735, 569, 110, 32);
-		contentPane.add(btnBuscar);
 		
 		JButton btnGravar_1_1 = new JButton("Gravar");
 		btnGravar_1_1.setBounds(855, 569, 110, 32);
@@ -191,24 +187,30 @@ public class TelaManterCursos extends JFrame {
 		
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
-		textField_2.setBounds(126, 408, 674, 20);
+		textField_2.setBounds(126, 408, 632, 20);
 		contentPane.add(textField_2);
 		
 		JButton btnGravar_1_2 = new JButton("Alterar");
-		btnGravar_1_2.setBounds(495, 323, 110, 32);
+		btnGravar_1_2.setBounds(615, 323, 110, 32);
 		contentPane.add(btnGravar_1_2);
 		
 		JButton btnExcluir_1 = new JButton("Excluir");
-		btnExcluir_1.setBounds(615, 323, 110, 32);
+		btnExcluir_1.setBounds(735, 323, 110, 32);
 		contentPane.add(btnExcluir_1);
-		
-		JButton btnBuscar_1 = new JButton("Buscar");
-		btnBuscar_1.setBounds(735, 323, 110, 32);
-		contentPane.add(btnBuscar_1);
 		
 		JButton btnGravar_1_1_1 = new JButton("Gravar");
 		btnGravar_1_1_1.setBounds(855, 323, 110, 32);
 		contentPane.add(btnGravar_1_1_1);
+		
+		JButton btnRegras_1_2 = new JButton("");
+		btnRegras_1_2.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
+		btnRegras_1_2.setBounds(476, 148, 32, 32);
+		contentPane.add(btnRegras_1_2);
+		
+		JButton btnRegras_1_2_1 = new JButton("");
+		btnRegras_1_2_1.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
+		btnRegras_1_2_1.setBounds(768, 395, 32, 32);
+		contentPane.add(btnRegras_1_2_1);
 		//----------------------------------------------------------------------------------------------------------------------------
 		
 		

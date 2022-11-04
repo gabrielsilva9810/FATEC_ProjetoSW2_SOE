@@ -146,28 +146,32 @@ public class TelaAdministrativo extends JFrame {
 				btnInserirFuncionrios.setBounds(729, 416, 223, 32);
 				tabDash.add(btnInserirFuncionrios);
 				
-				JCheckBox chckbxNewCheckBox = new JCheckBox("Professor");
-				chckbxNewCheckBox.setBounds(743, 50, 209, 23);
+				JCheckBox chckbxNewCheckBox = new JCheckBox("Professores");
+				chckbxNewCheckBox.setBounds(729, 50, 223, 23);
 				tabDash.add(chckbxNewCheckBox);
 				
 				JCheckBox chckbxAlunos = new JCheckBox("Alunos");
-				chckbxAlunos.setBounds(743, 81, 209, 23);
+				chckbxAlunos.setBounds(729, 81, 223, 23);
 				tabDash.add(chckbxAlunos);
 				
 				JComboBox comboBox = new JComboBox();
 				comboBox.setModel(new DefaultComboBoxModel(new String[] {"ADS 1", "ADS 2", "ADS 3", "ADS 4", "ADS 5"}));
-				comboBox.setBounds(741, 115, 209, 22);
+				comboBox.setBounds(729, 115, 223, 22);
 				tabDash.add(comboBox);
 				
 				JLabel lblNewLabel = new JLabel("Filtro para Dashboard");
 				lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-				lblNewLabel.setBounds(743, 29, 209, 14);
+				lblNewLabel.setBounds(729, 29, 223, 14);
 				tabDash.add(lblNewLabel);
 				
 				JLabel lblOutrasFunes = new JLabel("Funções Básicas");
 				lblOutrasFunes.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				lblOutrasFunes.setBounds(743, 262, 209, 14);
 				tabDash.add(lblOutrasFunes);
+				
+				JButton btnVnculos_1 = new JButton("Imprimir Relatório Dashboard");
+				btnVnculos_1.setBounds(729, 156, 223, 32);
+				tabDash.add(btnVnculos_1);
 				
 				tabPesquisa = new JPanel();
 				tabPesquisa.setBackground(new Color(214, 220, 228));
