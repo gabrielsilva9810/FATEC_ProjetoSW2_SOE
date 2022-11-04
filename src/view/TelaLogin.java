@@ -19,7 +19,6 @@ import javax.swing.JPasswordField;
 public class TelaLogin extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtPropriedadeDaFatec_1;
 	private JTextField txtSistemaDeOrientao;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -53,7 +52,7 @@ public class TelaLogin extends JFrame {
 // ====================================================================================================================================
 	public TelaLogin() {	
 				setBackground(new Color(214, 220, 228));
-				setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\\\Gabriel Silva\\\\Area de Trabalho\\\\FATEC\\\\OneDrive - Fatec Centro Paula Souza\\\\PROJETOS_GITHUB\\\\ENGENHARIA_SW2\\\\IMG"));
+				setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\TEMP\\IMG"));
 				setTitle("SOE - Sistema de Orientação Estudantil");
 				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				setBounds(150, 50, 1024, 680);// TAMANHO DA TELA
@@ -68,7 +67,7 @@ public class TelaLogin extends JFrame {
 				JLabel LOGO = new JLabel("");
 				LOGO.setHorizontalAlignment(SwingConstants.CENTER);
 				LOGO.setBackground(new Color(132, 151, 176));
-				LOGO.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\logoSOE.png"));
+				LOGO.setIcon(new ImageIcon("C:\\TEMP\\logoSOE.png"));
 				LOGO.setBounds(0, 0, 207, 93);
 				contentPane.add(LOGO);
 				
@@ -158,14 +157,14 @@ public class TelaLogin extends JFrame {
 				
 // ====================================================================================================================================				
 				JLabel LOGO_1_1 = new JLabel("");
-				LOGO_1_1.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\img (3).png"));
+				LOGO_1_1.setIcon(new ImageIcon("C:\\TEMP\\img (3).png"));
 				LOGO_1_1.setHorizontalAlignment(SwingConstants.CENTER);
 				LOGO_1_1.setBackground(Color.WHITE);
-				LOGO_1_1.setBounds(502, 72, 587, 569);
+				LOGO_1_1.setBounds(484, 72, 605, 569);
 				contentPane.add(LOGO_1_1);
 				
 				LOGO_1 = new JLabel("");
-				LOGO_1.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\fundo.png"));
+				LOGO_1.setIcon(new ImageIcon("C:\\TEMP\\fundo.png"));
 				LOGO_1.setHorizontalAlignment(SwingConstants.CENTER);
 				LOGO_1.setBackground(new Color(255, 255, 255));
 				LOGO_1.setBounds(566, 61, 442, 569);

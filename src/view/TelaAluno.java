@@ -19,6 +19,10 @@ import javax.swing.JTextArea;
 import javax.swing.JComboBox;
 import java.awt.List;
 import javax.swing.JTable;
+import javax.swing.JProgressBar;
+import java.awt.SystemColor;
+import javax.swing.JSeparator;
+import javax.swing.JCheckBox;
 
 public class TelaAluno extends JFrame {	
 	
@@ -40,13 +44,7 @@ public class TelaAluno extends JFrame {
 	private JButton btnRegras_1_2;
 	private JLabel lblTrilha_1;
 	private JLabel lblTrilha_2;
-	private JLabel lblAndamento;
-	private JLabel lblNome;
-	private JLabel lblTermo;
 	private JButton btnLimpar_2;
-	private JButton btnLimpar_3;
-	private JButton btnLimpar_4;
-	private JButton btnLimpar_5;
 	private JLabel LOGO_1;
 	private JTextField textField;
 	private JTextField textField_5;
@@ -95,16 +93,17 @@ public class TelaAluno extends JFrame {
 	private JLabel lblTemaDoTrabalho_3;
 	private JTextField textField_22;
 	private JTextField textField_23;
-	private JLabel LOGO_3;
 	private JTextField textField_17;
 	private JLabel lblStatus_2;
+	private JSeparator separator_3;
+	private JSeparator separator_4;
 	
 // ====================================================================================================================================
 // ============================================================ TELA BASE =============================================================
 // ====================================================================================================================================
 	public TelaAluno() {	
 				setBackground(new Color(214, 220, 228));
-				setIconImage(Toolkit.getDefaultToolkit().getImage("E:\\\\Gabriel Silva\\\\Area de Trabalho\\\\FATEC\\\\OneDrive - Fatec Centro Paula Souza\\\\PROJETOS_GITHUB\\\\ENGENHARIA_SW2\\\\IMG"));
+				setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\TEMP\\IMG"));
 				setTitle("SOE - Sistema de Orientação Estudantil");
 				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				setBounds(150, 50, 1024, 680);// TAMANHO DA TELA
@@ -120,7 +119,7 @@ public class TelaAluno extends JFrame {
 				LOGO.setBounds(0, 0, 207, 93);
 				LOGO.setHorizontalAlignment(SwingConstants.CENTER);
 				LOGO.setBackground(new Color(132, 151, 176));
-				LOGO.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\logoSOE.png"));
+				LOGO.setIcon(new ImageIcon("C:\\TEMP\\logoSOE.png"));
 				contentPane.add(LOGO);
 				
 				//----------------------------------------------------------------------------------------------------------------------------				
@@ -181,142 +180,155 @@ public class TelaAluno extends JFrame {
 				tabbedPane.addTab("     Perfil     ", null, tabPerfil, null);
 				tabPerfil.setLayout(null);
 				
-				LOGO_1 = new JLabel("");
-				LOGO_1.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\perfil.png"));
-				LOGO_1.setHorizontalAlignment(SwingConstants.CENTER);
-				LOGO_1.setBackground(new Color(132, 151, 176));
-				LOGO_1.setBounds(32, 23, 200, 201);
-				tabPerfil.add(LOGO_1);
-				
 				textField = new JTextField();
 				textField.setColumns(10);
-				textField.setBounds(795, 66, 156, 20);
+				textField.setBounds(794, 54, 156, 20);
 				tabPerfil.add(textField);
 				
 				JLabel lblNome_1 = new JLabel("RA");
-				lblNome_1.setBounds(795, 45, 40, 17);
+				lblNome_1.setBounds(794, 33, 40, 17);
 				tabPerfil.add(lblNome_1);
 				
 				JLabel lbTelefone = new JLabel("Curso");
-				lbTelefone.setBounds(242, 95, 64, 17);
+				lbTelefone.setBounds(241, 83, 64, 17);
 				tabPerfil.add(lbTelefone);
 				
 				JLabel lblCiclo = new JLabel("Ciclo");
-				lblCiclo.setBounds(361, 146, 65, 17);
+				lblCiclo.setBounds(360, 134, 65, 17);
 				tabPerfil.add(lblCiclo);
 				
 				JLabel lblPerodo = new JLabel("Período");
-				lblPerodo.setBounds(242, 146, 104, 17);
+				lblPerodo.setBounds(241, 134, 104, 17);
 				tabPerfil.add(lblPerodo);
 				
 				List list_1 = new List();
-				list_1.setBounds(242, 168, 104, 18);
+				list_1.setBounds(241, 156, 104, 18);
 				tabPerfil.add(list_1);
 				
 				textField_5 = new JTextField();
 				textField_5.setColumns(10);
-				textField_5.setBounds(361, 166, 65, 20);
+				textField_5.setBounds(360, 154, 65, 20);
 				tabPerfil.add(textField_5);
 				
 				textField_6 = new JTextField();
 				textField_6.setColumns(10);
-				textField_6.setBounds(688, 166, 263, 20);
+				textField_6.setBounds(687, 154, 263, 20);
 				tabPerfil.add(textField_6);
 				
 				JLabel lblEmail = new JLabel("E-mail");
-				lblEmail.setBounds(688, 148, 263, 17);
+				lblEmail.setBounds(687, 136, 263, 17);
 				tabPerfil.add(lblEmail);
 				
 				JLabel lblOrientador = new JLabel("Orientador");
-				lblOrientador.setBounds(667, 95, 284, 17);
+				lblOrientador.setBounds(666, 83, 284, 17);
 				tabPerfil.add(lblOrientador);
 				
 				textField_7 = new JTextField();
 				textField_7.setColumns(10);
-				textField_7.setBounds(667, 113, 284, 20);
+				textField_7.setBounds(666, 101, 284, 20);
 				tabPerfil.add(textField_7);
 				
 				textField_8 = new JTextField();
 				textField_8.setColumns(10);
-				textField_8.setBounds(436, 166, 95, 20);
+				textField_8.setBounds(435, 154, 95, 20);
 				tabPerfil.add(textField_8);
 				
 				JLabel lblStatus = new JLabel("Status");
-				lblStatus.setBounds(436, 148, 95, 17);
+				lblStatus.setBounds(435, 136, 95, 17);
 				tabPerfil.add(lblStatus);
 				
 				textField_9 = new JTextField();
 				textField_9.setColumns(10);
-				textField_9.setBounds(541, 166, 137, 20);
+				textField_9.setBounds(540, 154, 137, 20);
 				tabPerfil.add(textField_9);
 				
 				JLabel lblTelefone = new JLabel("Telefone");
-				lblTelefone.setBounds(541, 148, 137, 17);
+				lblTelefone.setBounds(540, 136, 137, 17);
 				tabPerfil.add(lblTelefone);
 				
 				textField_10 = new JTextField();
 				textField_10.setColumns(10);
-				textField_10.setBounds(571, 113, 86, 20);
+				textField_10.setBounds(570, 101, 86, 20);
 				tabPerfil.add(textField_10);
 				
 				JLabel lblSemestre = new JLabel("Semestre");
-				lblSemestre.setBounds(571, 97, 86, 17);
+				lblSemestre.setBounds(570, 85, 86, 17);
 				tabPerfil.add(lblSemestre);
 				
 				textField_11 = new JTextField();
 				textField_11.setColumns(10);
-				textField_11.setBounds(242, 66, 543, 20);
+				textField_11.setBounds(241, 54, 543, 20);
 				tabPerfil.add(textField_11);
 				
 				JLabel lbEmail = new JLabel("Nome");
-				lbEmail.setBounds(242, 45, 40, 17);
+				lbEmail.setBounds(241, 33, 40, 17);
 				tabPerfil.add(lbEmail);
 				
 				textField_12 = new JTextField();
 				textField_12.setColumns(10);
-				textField_12.setBounds(242, 113, 319, 20);
+				textField_12.setBounds(241, 101, 319, 20);
 				tabPerfil.add(textField_12);
 				
 				textField_13 = new JTextField();
 				textField_13.setColumns(10);
-				textField_13.setBounds(42, 258, 714, 20);
+				textField_13.setBounds(41, 233, 703, 20);
 				tabPerfil.add(textField_13);
 				
 				lblTemaDoTrabalho = new JLabel("Tema do Trabalho");
-				lblTemaDoTrabalho.setBounds(42, 235, 714, 30);
+				lblTemaDoTrabalho.setBounds(41, 210, 703, 30);
 				tabPerfil.add(lblTemaDoTrabalho);
 				
 				JTextArea textArea_1 = new JTextArea();
-				textArea_1.setBounds(42, 300, 714, 150);
+				textArea_1.setBounds(41, 274, 703, 137);
 				tabPerfil.add(textArea_1);
 				
 				btnGravar = new JButton("Alterar");
-				btnGravar.setBounds(481, 203, 110, 32);
+				btnGravar.setBounds(274, 422, 110, 32);
 				tabPerfil.add(btnGravar);
 				
 				btnExcluir = new JButton("Excluir");
-				btnExcluir.setBounds(601, 203, 110, 32);
+				btnExcluir.setBounds(394, 422, 110, 32);
 				tabPerfil.add(btnExcluir);
 				
 				btnBuscar = new JButton("Buscar");
-				btnBuscar.setBounds(721, 203, 110, 32);
+				btnBuscar.setBounds(514, 422, 110, 32);
 				tabPerfil.add(btnBuscar);
 				
 				btnGravar_1 = new JButton("Gravar");
-				btnGravar_1.setBounds(841, 203, 110, 32);
+				btnGravar_1.setBounds(634, 422, 110, 32);
 				tabPerfil.add(btnGravar_1);
 				
 				textArea_3 = new JTextArea();
-				textArea_3.setBounds(766, 300, 193, 150);
+				textArea_3.setBounds(765, 231, 186, 218);
 				tabPerfil.add(textArea_3);
 				
 				lblTemaDoTrabalho_1 = new JLabel("Membros do grupo");
-				lblTemaDoTrabalho_1.setBounds(766, 284, 193, 17);
+				lblTemaDoTrabalho_1.setBounds(765, 210, 193, 17);
 				tabPerfil.add(lblTemaDoTrabalho_1);
 				
 				JLabel lblDescrioDoProjeto = new JLabel("Descrição do projeto");
-				lblDescrioDoProjeto.setBounds(42, 276, 714, 32);
+				lblDescrioDoProjeto.setBounds(41, 250, 714, 32);
 				tabPerfil.add(lblDescrioDoProjeto);
+				
+				JButton btnRegras_1_2_1 = new JButton("");
+				btnRegras_1_2_1.setIcon(new ImageIcon("C:\\TEMP\\atualizar.png"));
+				btnRegras_1_2_1.setBounds(185, 180, 32, 32);
+				tabPerfil.add(btnRegras_1_2_1);
+				
+				LOGO_1 = new JLabel("");
+				LOGO_1.setIcon(new ImageIcon("C:\\TEMP\\perfil.png"));
+				LOGO_1.setHorizontalAlignment(SwingConstants.CENTER);
+				LOGO_1.setBackground(new Color(132, 151, 176));
+				LOGO_1.setBounds(31, 11, 200, 201);
+				tabPerfil.add(LOGO_1);
+				
+				separator_3 = new JSeparator();
+				separator_3.setBounds(242, 209, 1, 2);
+				tabPerfil.add(separator_3);
+				
+				separator_4 = new JSeparator();
+				separator_4.setBounds(241, 197, 709, 2);
+				tabPerfil.add(separator_4);
 				
 				tabGrupo = new JPanel();
 				tabGrupo.setBackground(new Color(214, 220, 228));
@@ -436,13 +448,6 @@ public class TelaAluno extends JFrame {
 				textField_23.setBounds(10, 231, 949, 161);
 				tabGrupo.add(textField_23);
 				
-				LOGO_3 = new JLabel("");
-				LOGO_3.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\fundo.png"));
-				LOGO_3.setHorizontalAlignment(SwingConstants.CENTER);
-				LOGO_3.setBackground(new Color(132, 151, 176));
-				LOGO_3.setBounds(67, 412, 457, 5);
-				tabGrupo.add(LOGO_3);
-				
 				textField_17 = new JTextField();
 				textField_17.setColumns(10);
 				textField_17.setBounds(577, 405, 119, 20);
@@ -452,21 +457,23 @@ public class TelaAluno extends JFrame {
 				lblStatus_2.setBounds(534, 403, 143, 25);
 				tabGrupo.add(lblStatus_2);
 				
+				JProgressBar progressBar = new JProgressBar();
+				progressBar.setStringPainted(true);
+				progressBar.setForeground(SystemColor.textHighlight);
+				progressBar.setBounds(66, 403, 457, 17);
+				tabGrupo.add(progressBar);
+				
 				tabAgenda = new JPanel();
 				tabAgenda.setBackground(new Color(214, 220, 228));
 				tabbedPane.addTab("     Agenda     ", null, tabAgenda, null);
 				tabAgenda.setLayout(null);
 				
 				LOGO_2 = new JLabel("");
-				LOGO_2.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\Calendario.png"));
+				LOGO_2.setIcon(new ImageIcon("C:\\TEMP\\Calendario.png"));
 				LOGO_2.setHorizontalAlignment(SwingConstants.CENTER);
 				LOGO_2.setBackground(new Color(132, 151, 176));
 				LOGO_2.setBounds(0, 42, 687, 368);
 				tabAgenda.add(LOGO_2);
-				
-				textArea_2 = new JTextArea();
-				textArea_2.setBounds(697, 42, 241, 368);
-				tabAgenda.add(textArea_2);
 				
 				lblNewLabel = new JLabel("Calendário");
 				lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -496,6 +503,22 @@ public class TelaAluno extends JFrame {
 				btnGravar_3.setBounds(539, 429, 110, 32);
 				tabAgenda.add(btnGravar_3);
 				
+				JSeparator separator_2 = new JSeparator();
+				separator_2.setBounds(710, 131, 218, 2);
+				tabAgenda.add(separator_2);
+				
+				JSeparator separator_2_1 = new JSeparator();
+				separator_2_1.setBounds(710, 228, 218, 2);
+				tabAgenda.add(separator_2_1);
+				
+				JSeparator separator_2_1_1 = new JSeparator();
+				separator_2_1_1.setBounds(710, 329, 218, 2);
+				tabAgenda.add(separator_2_1_1);
+				
+				textArea_2 = new JTextArea();
+				textArea_2.setBounds(697, 42, 241, 368);
+				tabAgenda.add(textArea_2);
+				
 				tabPesquisa = new JPanel();
 				tabPesquisa.setBackground(new Color(214, 220, 228));
 				tabbedPane.addTab("     Pesquisa     ", null, tabPesquisa, null);
@@ -515,73 +538,87 @@ public class TelaAluno extends JFrame {
 				lblNomeDoGrupo = new JLabel("Pesquisar");
 				lblNomeDoGrupo.setHorizontalAlignment(SwingConstants.CENTER);
 				lblNomeDoGrupo.setFont(new Font("Tahoma", Font.PLAIN, 16));
-				lblNomeDoGrupo.setBounds(217, 21, 491, 25);
+				lblNomeDoGrupo.setBounds(217, 11, 491, 25);
 				tabPesquisa.add(lblNomeDoGrupo);
 				
 				textField_4 = new JTextField();
 				textField_4.setColumns(10);
-				textField_4.setBounds(217, 44, 491, 30);
+				textField_4.setBounds(217, 34, 491, 30);
 				tabPesquisa.add(textField_4);
 				
 				btnRegras_1_2 = new JButton("");
-				btnRegras_1_2.setIcon(new ImageIcon("D:\\A FATEC\\GitHub\\TrabalhoED\\FATEC_ProjetoSW2_SOE\\img\\lupa.png"));
-				btnRegras_1_2.setBounds(717, 44, 32, 32);
+				btnRegras_1_2.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
+				btnRegras_1_2.setBounds(717, 34, 32, 32);
 				tabPesquisa.add(btnRegras_1_2);							
 				//----------------------------------------------------------------------------------------------------------------------------
 				
-				lblTrilha = new JLabel("Orientador");
+				lblTrilha = new JLabel("Nome");
 				lblTrilha.setHorizontalAlignment(SwingConstants.CENTER);
-				lblTrilha.setBounds(117, 124, 82, 25);
+				lblTrilha.setBounds(89, 124, 82, 25);
 				tabPesquisa.add(lblTrilha);
 				
-				lblTrilha_1 = new JLabel("Grupo");
+				lblTrilha_1 = new JLabel("Tipo de usuário");
 				lblTrilha_1.setHorizontalAlignment(SwingConstants.CENTER);
-				lblTrilha_1.setBounds(253, 124, 82, 25);
+				lblTrilha_1.setBounds(202, 124, 82, 25);
 				tabPesquisa.add(lblTrilha_1);
 				
-				lblTrilha_2 = new JLabel("Tema");
+				lblTrilha_2 = new JLabel("Tema/ Área de atuação");
 				lblTrilha_2.setHorizontalAlignment(SwingConstants.CENTER);
-				lblTrilha_2.setBounds(389, 124, 82, 25);
+				lblTrilha_2.setBounds(346, 124, 125, 25);
 				tabPesquisa.add(lblTrilha_2);
 				
-				lblAndamento = new JLabel("Andamento");
-				lblAndamento.setHorizontalAlignment(SwingConstants.CENTER);
-				lblAndamento.setBounds(525, 124, 82, 25);
-				tabPesquisa.add(lblAndamento);
-				
-				lblNome = new JLabel("Nome");
-				lblNome.setHorizontalAlignment(SwingConstants.CENTER);
-				lblNome.setBounds(661, 124, 82, 25);
-				tabPesquisa.add(lblNome);
-				
-				lblTermo = new JLabel("Termo");
-				lblTermo.setHorizontalAlignment(SwingConstants.CENTER);
-				lblTermo.setBounds(797, 124, 82, 25);
-				tabPesquisa.add(lblTermo);
-				
-				btnLimpar_2 = new JButton("Termo");
-				btnLimpar_2.setBounds(784, 160, 125, 32);
+				btnLimpar_2 = new JButton("Formar Grupo / Orientador");
+				btnLimpar_2.setBounds(731, 167, 178, 32);
 				tabPesquisa.add(btnLimpar_2);
 				
-				btnLimpar_3 = new JButton("Termo");
-				btnLimpar_3.setBounds(784, 216, 125, 32);
-				tabPesquisa.add(btnLimpar_3);
+				JButton btnLimpar_2_1 = new JButton("Formar Grupo / Orientador");
+				btnLimpar_2_1.setBounds(731, 217, 178, 32);
+				tabPesquisa.add(btnLimpar_2_1);
 				
-				btnLimpar_4 = new JButton("Termo");
-				btnLimpar_4.setBounds(784, 272, 125, 32);
-				tabPesquisa.add(btnLimpar_4);
+				JButton btnLimpar_2_3 = new JButton("Formar Grupo / Orientador");
+				btnLimpar_2_3.setBounds(731, 266, 178, 32);
+				tabPesquisa.add(btnLimpar_2_3);
 				
-				btnLimpar_5 = new JButton("Termo");
-				btnLimpar_5.setBounds(784, 326, 125, 32);
-				tabPesquisa.add(btnLimpar_5);
+				JButton btnLimpar_2_4 = new JButton("Formar Grupo / Orientador");
+				btnLimpar_2_4.setBounds(731, 316, 178, 32);
+				tabPesquisa.add(btnLimpar_2_4);
 				
-				JButton btnLimpar_5_1 = new JButton("Termo");
-				btnLimpar_5_1.setBounds(784, 379, 125, 32);
-				tabPesquisa.add(btnLimpar_5_1);
+				JButton btnLimpar_2_5 = new JButton("Formar Grupo / Orientador");
+				btnLimpar_2_5.setBounds(731, 364, 178, 32);
+				tabPesquisa.add(btnLimpar_2_5);
+				
+				JSeparator separator = new JSeparator();
+				separator.setBounds(89, 204, 619, 11);
+				tabPesquisa.add(separator);
+				
+				JSeparator separator_1 = new JSeparator();
+				separator_1.setBounds(89, 255, 619, 11);
+				tabPesquisa.add(separator_1);
+				
+				JSeparator separator_1_1 = new JSeparator();
+				separator_1_1.setBounds(89, 307, 619, 11);
+				tabPesquisa.add(separator_1_1);
+				
+				JSeparator separator_1_1_1 = new JSeparator();
+				separator_1_1_1.setBounds(89, 359, 619, 11);
+				tabPesquisa.add(separator_1_1_1);
 				
 				JTextArea textArea = new JTextArea();
 				textArea.setBounds(60, 111, 863, 310);
 				tabPesquisa.add(textArea);
+				
+				JLabel lblFiltro = new JLabel("Filtro:");
+				lblFiltro.setHorizontalAlignment(SwingConstants.LEFT);
+				lblFiltro.setBounds(217, 75, 82, 19);
+				tabPesquisa.add(lblFiltro);
+				
+				JCheckBox chckbxNewCheckBox = new JCheckBox("Professor");
+				chckbxNewCheckBox.setBounds(257, 73, 97, 23);
+				tabPesquisa.add(chckbxNewCheckBox);
+				
+				JCheckBox chckbxAlunos = new JCheckBox("Alunos");
+				chckbxAlunos.setBounds(374, 73, 97, 23);
+				tabPesquisa.add(chckbxAlunos);
 				//----------------------------------------------------------------------------------------------------------------------------				
 			}
 }

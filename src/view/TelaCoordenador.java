@@ -14,10 +14,12 @@ import javax.swing.JTabbedPane;
 import java.awt.List;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JCheckBox;
 import javax.swing.JSeparator;
 
-public class TelaOrientador extends JFrame {	
+public class TelaCoordenador extends JFrame {	
 	
 	private static final long serialVersionUID = 4796562433790656257L;
 	private JPanel contentPane;
@@ -35,17 +37,22 @@ public class TelaOrientador extends JFrame {
 	private JTextField textField_7;
 	private JTextField textField_11;
 	private JTextField textField_12;
+	private JTextField textField_5;
 	private JTextField textField_8;
 	private JTextField textField_9;
 	private JTextField textField_10;
 	private JTextField textField_13;
 	private JTextField textField_14;
-	private JTextField textField_5;
+	private JTextField textField_15;
+	private JTextField textField_16;
+	private JTextField textField_17;
+	private JTextField textField_18;
+	private JTextField textField_19;
 	
 // ====================================================================================================================================
 // ============================================================ TELA BASE =============================================================
 // ====================================================================================================================================
-	public TelaOrientador() {	
+	public TelaCoordenador() {	
 				setBackground(new Color(214, 220, 228));
 				setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\TEMP\\IMG"));
 				setTitle("SOE - Sistema de Orientação Estudantil");
@@ -194,12 +201,12 @@ public class TelaOrientador extends JFrame {
 				tabPerfil.add(btnGravar_1);
 				
 				JLabel lblTemaDoTrabalho = new JLabel("Formação");
-				lblTemaDoTrabalho.setBounds(221, 199, 88, 30);
+				lblTemaDoTrabalho.setBounds(220, 194, 88, 30);
 				tabPerfil.add(lblTemaDoTrabalho);
 				
 				textField_12 = new JTextField();
 				textField_12.setColumns(10);
-				textField_12.setBounds(220, 231, 714, 64);
+				textField_12.setBounds(220, 223, 714, 72);
 				tabPerfil.add(textField_12);
 				
 				JLabel lblDescrioDoProjeto = new JLabel("Áreas para orientar");
@@ -216,7 +223,7 @@ public class TelaOrientador extends JFrame {
 				
 				JButton btnRegras_1_2_1 = new JButton("");
 				btnRegras_1_2_1.setIcon(new ImageIcon("C:\\TEMP\\atualizar.png"));
-				btnRegras_1_2_1.setBounds(157, 182, 32, 32);
+				btnRegras_1_2_1.setBounds(158, 180, 32, 32);
 				tabPerfil.add(btnRegras_1_2_1);
 				
 				JLabel LOGO_1 = new JLabel("");
@@ -226,42 +233,29 @@ public class TelaOrientador extends JFrame {
 				LOGO_1.setBounds(10, 11, 200, 201);
 				tabPerfil.add(LOGO_1);
 				
-				JSeparator separator_2 = new JSeparator();
-				separator_2.setBounds(21, 284, 156, 2);
-				tabPerfil.add(separator_2);
-				
 				JSeparator separator_2_1 = new JSeparator();
-				separator_2_1.setBounds(21, 312, 156, 2);
+				separator_2_1.setBounds(20, 302, 156, 2);
 				tabPerfil.add(separator_2_1);
 				
+				JSeparator separator_2 = new JSeparator();
+				separator_2.setBounds(20, 274, 156, 2);
+				tabPerfil.add(separator_2);
+				
 				JSeparator separator_2_2 = new JSeparator();
-				separator_2_2.setBounds(21, 342, 156, 2);
+				separator_2_2.setBounds(20, 332, 156, 2);
 				tabPerfil.add(separator_2_2);
 				
 				JSeparator separator_2_3 = new JSeparator();
-				separator_2_3.setBounds(21, 372, 156, 2);
+				separator_2_3.setBounds(20, 362, 156, 2);
 				tabPerfil.add(separator_2_3);
 				
 				JSeparator separator_2_4 = new JSeparator();
-				separator_2_4.setBounds(21, 403, 156, 2);
+				separator_2_4.setBounds(20, 393, 156, 2);
 				tabPerfil.add(separator_2_4);
 				
 				List list_1_1 = new List();
-				list_1_1.setBounds(10, 248, 180, 182);
+				list_1_1.setBounds(10, 239, 180, 182);
 				tabPerfil.add(list_1_1);
-				
-				JSeparator separator_3 = new JSeparator();
-				separator_3.setBounds(221, 198, 708, 5);
-				tabPerfil.add(separator_3);
-				
-				JButton btnRegras_1_2_1_1 = new JButton("");
-				btnRegras_1_2_1_1.setIcon(new ImageIcon("C:\\TEMP\\atualizar.png"));
-				btnRegras_1_2_1_1.setBounds(156, 434, 32, 32);
-				tabPerfil.add(btnRegras_1_2_1_1);
-				
-				JButton btnInserirHorrio = new JButton("Inserir horário");
-				btnInserirHorrio.setBounds(11, 436, 134, 32);
-				tabPerfil.add(btnInserirHorrio);
 				
 				tabGrupos = new JPanel();
 				tabGrupos.setBackground(new Color(214, 220, 228));
@@ -409,107 +403,233 @@ public class TelaOrientador extends JFrame {
 				tabPesquisa = new JPanel();
 				tabPesquisa.setBackground(new Color(214, 220, 228));
 				tabbedPane.addTab("     Pesquisa     ", null, tabPesquisa, null);
-				tabPesquisa.setLayout(null);
+				tabPesquisa.setLayout(null);							
 				
 				JLabel lblNomeDoGrupo = new JLabel("Pesquisar");
 				lblNomeDoGrupo.setHorizontalAlignment(SwingConstants.CENTER);
 				lblNomeDoGrupo.setFont(new Font("Tahoma", Font.PLAIN, 16));
-				lblNomeDoGrupo.setBounds(202, 8, 491, 25);
+				lblNomeDoGrupo.setBounds(220, 11, 491, 25);
 				tabPesquisa.add(lblNomeDoGrupo);
 				
 				textField_5 = new JTextField();
 				textField_5.setColumns(10);
-				textField_5.setBounds(202, 31, 491, 30);
+				textField_5.setBounds(220, 34, 491, 30);
 				tabPesquisa.add(textField_5);
-				
-				JLabel lblFiltro = new JLabel("Filtro:");
-				lblFiltro.setHorizontalAlignment(SwingConstants.LEFT);
-				lblFiltro.setBounds(205, 66, 82, 19);
-				tabPesquisa.add(lblFiltro);
-				
-				JCheckBox chckbxNewCheckBox_1 = new JCheckBox("Professor");
-				chckbxNewCheckBox_1.setBounds(252, 64, 97, 23);
-				tabPesquisa.add(chckbxNewCheckBox_1);
-				
-				JCheckBox chckbxAlunos_1 = new JCheckBox("Alunos");
-				chckbxAlunos_1.setBounds(369, 64, 97, 23);
-				tabPesquisa.add(chckbxAlunos_1);
 				
 				JButton btnRegras_1_2 = new JButton("");
 				btnRegras_1_2.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
-				btnRegras_1_2.setBounds(702, 31, 32, 32);
+				btnRegras_1_2.setBounds(720, 34, 32, 32);
 				tabPesquisa.add(btnRegras_1_2);
-				
-				JLabel lblAndamento = new JLabel("Tema");
-				lblAndamento.setHorizontalAlignment(SwingConstants.CENTER);
-				lblAndamento.setBounds(462, 111, 82, 25);
-				tabPesquisa.add(lblAndamento);
-				
-				JLabel lblTrilha_2 = new JLabel("Orientador");
-				lblTrilha_2.setHorizontalAlignment(SwingConstants.CENTER);
-				lblTrilha_2.setBounds(305, 111, 82, 25);
-				tabPesquisa.add(lblTrilha_2);
-				
-				JLabel lblTrilha_1 = new JLabel("Tipo de Usuário");
-				lblTrilha_1.setHorizontalAlignment(SwingConstants.CENTER);
-				lblTrilha_1.setBounds(188, 111, 82, 25);
-				tabPesquisa.add(lblTrilha_1);
 				
 				JLabel lblTrilha = new JLabel("Nome");
 				lblTrilha.setHorizontalAlignment(SwingConstants.CENTER);
-				lblTrilha.setBounds(84, 111, 82, 25);
+				lblTrilha.setBounds(95, 114, 82, 25);
 				tabPesquisa.add(lblTrilha);
 				
+				JLabel lblTrilha_1 = new JLabel("Tipo de Usuário");
+				lblTrilha_1.setHorizontalAlignment(SwingConstants.CENTER);
+				lblTrilha_1.setBounds(199, 114, 82, 25);
+				tabPesquisa.add(lblTrilha_1);
+				
+				JLabel lblTrilha_2 = new JLabel("Orientador");
+				lblTrilha_2.setHorizontalAlignment(SwingConstants.CENTER);
+				lblTrilha_2.setBounds(316, 114, 82, 25);
+				tabPesquisa.add(lblTrilha_2);
+				
+				JLabel lblAndamento = new JLabel("Tema");
+				lblAndamento.setHorizontalAlignment(SwingConstants.CENTER);
+				lblAndamento.setBounds(473, 114, 82, 25);
+				tabPesquisa.add(lblAndamento);
+				
+				JButton btnLimpar_2 = new JButton("Ver Andamento");
+				btnLimpar_2.setBounds(787, 150, 125, 32);
+				tabPesquisa.add(btnLimpar_2);
+				
+				JButton btnLimpar_3 = new JButton("Ver Andamento");
+				btnLimpar_3.setBounds(787, 206, 125, 32);
+				tabPesquisa.add(btnLimpar_3);
+				
+				JButton btnLimpar_4 = new JButton("Ver Andamento");
+				btnLimpar_4.setBounds(787, 262, 125, 32);
+				tabPesquisa.add(btnLimpar_4);
+				
+				JButton btnLimpar_5 = new JButton("Ver Andamento");
+				btnLimpar_5.setBounds(787, 316, 125, 32);
+				tabPesquisa.add(btnLimpar_5);
+				
+				JButton btnLimpar_5_1 = new JButton("Ver Andamento");
+				btnLimpar_5_1.setBounds(787, 369, 125, 32);
+				tabPesquisa.add(btnLimpar_5_1);
+				
+				JButton btnLimpar = new JButton("Imprimir");
+				btnLimpar.setFont(new Font("Tahoma", Font.PLAIN, 11));
+				btnLimpar.setBounds(787, 422, 125, 32);
+				tabPesquisa.add(btnLimpar);
+				
+				JLabel lblPainel = new JLabel(" ◄ 1 2 3 4 5 6 7 ... última ► ");
+				lblPainel.setHorizontalAlignment(SwingConstants.CENTER);
+				lblPainel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+				lblPainel.setBounds(381, 426, 227, 25);
+				tabPesquisa.add(lblPainel);
+				
+				JCheckBox chckbxAlunos_1 = new JCheckBox("Alunos");
+				chckbxAlunos_1.setBounds(380, 67, 97, 23);
+				tabPesquisa.add(chckbxAlunos_1);
+				
+				JCheckBox chckbxNewCheckBox_1 = new JCheckBox("Professor");
+				chckbxNewCheckBox_1.setBounds(263, 67, 97, 23);
+				tabPesquisa.add(chckbxNewCheckBox_1);
+				
+				JLabel lblFiltro = new JLabel("Filtro:");
+				lblFiltro.setHorizontalAlignment(SwingConstants.LEFT);
+				lblFiltro.setBounds(223, 69, 82, 19);
+				tabPesquisa.add(lblFiltro);
+				
 				JSeparator separator = new JSeparator();
-				separator.setBounds(84, 195, 654, 11);
+				separator.setBounds(95, 198, 654, 11);
 				tabPesquisa.add(separator);
 				
 				JSeparator separator_1 = new JSeparator();
-				separator_1.setBounds(84, 246, 654, 11);
+				separator_1.setBounds(95, 249, 654, 11);
 				tabPesquisa.add(separator_1);
 				
 				JSeparator separator_1_1 = new JSeparator();
-				separator_1_1.setBounds(84, 298, 654, 11);
+				separator_1_1.setBounds(95, 301, 654, 11);
 				tabPesquisa.add(separator_1_1);
 				
 				JSeparator separator_1_1_1 = new JSeparator();
-				separator_1_1_1.setBounds(84, 350, 654, 11);
+				separator_1_1_1.setBounds(95, 353, 654, 11);
 				tabPesquisa.add(separator_1_1_1);
 				
-				JLabel lblPainel_1 = new JLabel(" ◄ 1 2 3 4 5 6 7 ... última ► ");
-				lblPainel_1.setHorizontalAlignment(SwingConstants.CENTER);
-				lblPainel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-				lblPainel_1.setBounds(370, 423, 227, 25);
-				tabPesquisa.add(lblPainel_1);
-				
-				JButton btnLimpar_1 = new JButton("Imprimir");
-				btnLimpar_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
-				btnLimpar_1.setBounds(776, 419, 125, 32);
-				tabPesquisa.add(btnLimpar_1);
-				
-				JButton btnLimpar_5_1 = new JButton("Ver Andamento");
-				btnLimpar_5_1.setBounds(776, 366, 125, 32);
-				tabPesquisa.add(btnLimpar_5_1);
-				
-				JButton btnLimpar_5 = new JButton("Ver Andamento");
-				btnLimpar_5.setBounds(776, 313, 125, 32);
-				tabPesquisa.add(btnLimpar_5);
-				
-				JButton btnLimpar_4 = new JButton("Ver Andamento");
-				btnLimpar_4.setBounds(776, 259, 125, 32);
-				tabPesquisa.add(btnLimpar_4);
-				
-				JButton btnLimpar_3 = new JButton("Ver Andamento");
-				btnLimpar_3.setBounds(776, 203, 125, 32);
-				tabPesquisa.add(btnLimpar_3);
-				
-				JButton btnLimpar_2 = new JButton("Ver Andamento");
-				btnLimpar_2.setBounds(776, 147, 125, 32);
-				tabPesquisa.add(btnLimpar_2);
-				
 				JTextArea textArea = new JTextArea();
-				textArea.setBounds(52, 98, 863, 310);
+				textArea.setBounds(63, 101, 863, 310);
 				tabPesquisa.add(textArea);
+				
+				JPanel tabRegras = new JPanel();
+				tabRegras.setBackground(new Color(214, 220, 228));
+				tabbedPane.addTab("     Regras     ", null, tabRegras, null);
+				tabRegras.setLayout(null);
+				
+				JButton btnGravar_2_1 = new JButton("Alterar");
+				btnGravar_2_1.setBounds(824, 417, 132, 32);
+				tabRegras.add(btnGravar_2_1);
+				
+				JButton btnExcluir_1_1 = new JButton("Excluir");
+				btnExcluir_1_1.setBounds(824, 374, 132, 32);
+				tabRegras.add(btnExcluir_1_1);
+				
+				JButton btnBuscar_1_1 = new JButton("Buscar");
+				btnBuscar_1_1.setBounds(682, 417, 132, 32);
+				tabRegras.add(btnBuscar_1_1);
+				
+				JButton btnGravar_3_1 = new JButton("Gravar");
+				btnGravar_3_1.setBounds(682, 374, 132, 32);
+				tabRegras.add(btnGravar_3_1);
+				
+				textField_15 = new JTextField();
+				textField_15.setColumns(10);
+				textField_15.setBounds(50, 32, 398, 20);
+				tabRegras.add(textField_15);
+				
+				JLabel lblNomeDoTipo = new JLabel("Nome do tipo do Projeto para TCC");
+				lblNomeDoTipo.setBounds(50, 11, 198, 17);
+				tabRegras.add(lblNomeDoTipo);
+				
+				JLabel lblQuantidadeDeAlunos = new JLabel("Quantidade de Alunos por grupo");
+				lblQuantidadeDeAlunos.setBounds(682, 95, 160, 17);
+				tabRegras.add(lblQuantidadeDeAlunos);
+				
+				JLabel lblDefinirDatasDe = new JLabel("Definir data de entrega");
+				lblDefinirDatasDe.setBounds(682, 129, 125, 17);
+				tabRegras.add(lblDefinirDatasDe);
+				
+				textField_16 = new JTextField();
+				textField_16.setColumns(10);
+				textField_16.setBounds(802, 127, 160, 20);
+				tabRegras.add(textField_16);
+				
+				textField_17 = new JTextField();
+				textField_17.setColumns(10);
+				textField_17.setBounds(852, 93, 110, 20);
+				tabRegras.add(textField_17);
+				
+				JButton btnGravar_2_1_1 = new JButton("Inserir Template");
+				btnGravar_2_1_1.setBounds(682, 167, 133, 32);
+				tabRegras.add(btnGravar_2_1_1);
+				
+				JButton btnGravar_2_1_1_1 = new JButton("Regras da ABNT");
+				btnGravar_2_1_1_1.setBounds(829, 167, 133, 32);
+				tabRegras.add(btnGravar_2_1_1_1);
+				
+				JComboBox comboBox = new JComboBox();
+				comboBox.setModel(new DefaultComboBoxModel(new String[] {"Curso 1", "Curso 2", "Curso 3", "Curso 4", "Curso 5", "Curso 6"}));
+				comboBox.setBounds(480, 31, 482, 22);
+				tabRegras.add(comboBox);
+				
+				JLabel lblCurso = new JLabel("Curso");
+				lblCurso.setBounds(480, 11, 409, 17);
+				tabRegras.add(lblCurso);
+				
+				JLabel lblNewLabel_2 = new JLabel("Calendário de Atividades");
+				lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+				lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+				lblNewLabel_2.setBounds(50, 63, 609, 20);
+				tabRegras.add(lblNewLabel_2);
+				
+				JLabel LOGO_2_2 = new JLabel("");
+				LOGO_2_2.setIcon(new ImageIcon("C:\\TEMP\\Calendario.png"));
+				LOGO_2_2.setHorizontalAlignment(SwingConstants.CENTER);
+				LOGO_2_2.setBackground(new Color(132, 151, 176));
+				LOGO_2_2.setBounds(10, 93, 687, 368);
+				tabRegras.add(LOGO_2_2);
+				
+				JLabel lblListaDeDatas = new JLabel("Lista de Datas Importantes");
+				lblListaDeDatas.setBounds(682, 220, 280, 17);
+				tabRegras.add(lblListaDeDatas);
+				
+				textField_18 = new JTextField();
+				textField_18.setColumns(10);
+				textField_18.setBounds(682, 236, 280, 127);
+				tabRegras.add(textField_18);
+				
+				JPanel tabDash = new JPanel();
+				tabDash.setBackground(new Color(214, 220, 228));
+				tabbedPane.addTab("     Dashboard     ", null, tabDash, null);
+				tabDash.setLayout(null);
+				
+				JLabel LOGO_2_1 = new JLabel("");
+				LOGO_2_1.setIcon(new ImageIcon("C:\\TEMP\\Dash.png"));
+				LOGO_2_1.setHorizontalAlignment(SwingConstants.CENTER);
+				LOGO_2_1.setBackground(new Color(132, 151, 176));
+				LOGO_2_1.setBounds(0, 0, 701, 472);
+				tabDash.add(LOGO_2_1);
+				
+				JLabel lblNewLabel_3 = new JLabel("Filtro para Dash");
+				lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+				lblNewLabel_3.setBounds(725, 26, 234, 14);
+				tabDash.add(lblNewLabel_3);
+				
+				JCheckBox chckbxNewCheckBox = new JCheckBox("Professor");
+				chckbxNewCheckBox.setBounds(725, 47, 234, 23);
+				tabDash.add(chckbxNewCheckBox);
+				
+				JCheckBox chckbxAlunos = new JCheckBox("Alunos");
+				chckbxAlunos.setBounds(725, 73, 234, 23);
+				tabDash.add(chckbxAlunos);
+				
+				JComboBox comboBox_1 = new JComboBox();
+				comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"Curso 01", "Curso 02", "Curso 03", "Curso 04", "Curso 05"}));
+				comboBox_1.setBounds(725, 103, 234, 22);
+				tabDash.add(comboBox_1);
+				
+				JLabel lblListaDeDatas_1 = new JLabel("Datas das apresentações");
+				lblListaDeDatas_1.setBounds(725, 152, 234, 17);
+				tabDash.add(lblListaDeDatas_1);
+				
+				textField_19 = new JTextField();
+				textField_19.setColumns(10);
+				textField_19.setBounds(725, 168, 234, 268);
+				tabDash.add(textField_19);
 				//----------------------------------------------------------------------------------------------------------------------------				
 			}
 }
