@@ -282,6 +282,10 @@ public class TelaCoordenador extends JFrame {
 				textArea_3_1.setBounds(746, 217, 186, 231);
 				tabPerfil.add(textArea_3_1);
 				
+				JSeparator separator_3_1 = new JSeparator();
+				separator_3_1.setBounds(220, 194, 708, 5);
+				tabPerfil.add(separator_3_1);
+				
 				tabGrupos = new JPanel();
 				tabGrupos.setBackground(new Color(214, 220, 228));
 				tabbedPane.addTab("     Grupos     ", null, tabGrupos, null);
@@ -317,13 +321,6 @@ public class TelaCoordenador extends JFrame {
 				JLabel lblTrilha_3 = new JLabel("Progresso");
 				lblTrilha_3.setBounds(734, 35, 239, 51);
 				tabGrupos.add(lblTrilha_3);
-				
-				JLabel LOGO_3 = new JLabel("");
-				LOGO_3.setIcon(new ImageIcon("C:\\TEMP\\GraficoPizza.png"));
-				LOGO_3.setHorizontalAlignment(SwingConstants.CENTER);
-				LOGO_3.setBackground(new Color(132, 151, 176));
-				LOGO_3.setBounds(734, 47, 239, 208);
-				tabGrupos.add(LOGO_3);
 				
 				JLabel lblStatus_4 = new JLabel("Data da última atualização");
 				lblStatus_4.setBounds(10, 48, 143, 25);
@@ -380,6 +377,23 @@ public class TelaCoordenador extends JFrame {
 				JTextArea textArea_3 = new JTextArea();
 				textArea_3.setBounds(10, 278, 945, 183);
 				tabGrupos.add(textArea_3);
+				
+				JLabel lblStatus_1_1_1 = new JLabel("15%");
+				lblStatus_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+				lblStatus_1_1_1.setBounds(855, 85, 37, 25);
+				tabGrupos.add(lblStatus_1_1_1);
+				
+				JLabel lblStatus_1_1 = new JLabel("85%");
+				lblStatus_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+				lblStatus_1_1.setBounds(813, 185, 45, 25);
+				tabGrupos.add(lblStatus_1_1);
+				
+				JLabel LOGO_3 = new JLabel("");
+				LOGO_3.setIcon(new ImageIcon("C:\\TEMP\\GraficoPizza.png"));
+				LOGO_3.setHorizontalAlignment(SwingConstants.CENTER);
+				LOGO_3.setBackground(new Color(132, 151, 176));
+				LOGO_3.setBounds(734, 47, 239, 208);
+				tabGrupos.add(LOGO_3);
 				
 				tabAgenda = new JPanel();
 				tabAgenda.setBackground(new Color(214, 220, 228));
@@ -536,19 +550,15 @@ public class TelaCoordenador extends JFrame {
 				tabRegras.setLayout(null);
 				
 				JButton btnGravar_2_1 = new JButton("Alterar");
-				btnGravar_2_1.setBounds(824, 417, 132, 32);
+				btnGravar_2_1.setBounds(874, 417, 88, 32);
 				tabRegras.add(btnGravar_2_1);
 				
 				JButton btnExcluir_1_1 = new JButton("Excluir");
-				btnExcluir_1_1.setBounds(824, 374, 132, 32);
+				btnExcluir_1_1.setBounds(778, 418, 88, 32);
 				tabRegras.add(btnExcluir_1_1);
 				
-				JButton btnBuscar_1_1 = new JButton("Buscar");
-				btnBuscar_1_1.setBounds(682, 417, 132, 32);
-				tabRegras.add(btnBuscar_1_1);
-				
 				JButton btnGravar_3_1 = new JButton("Gravar");
-				btnGravar_3_1.setBounds(682, 374, 132, 32);
+				btnGravar_3_1.setBounds(682, 417, 88, 32);
 				tabRegras.add(btnGravar_3_1);
 				
 				textField_15 = new JTextField();
@@ -614,7 +624,7 @@ public class TelaCoordenador extends JFrame {
 				
 				textField_18 = new JTextField();
 				textField_18.setColumns(10);
-				textField_18.setBounds(682, 236, 280, 127);
+				textField_18.setBounds(682, 236, 280, 168);
 				tabRegras.add(textField_18);
 				
 				JPanel tabDash = new JPanel();
