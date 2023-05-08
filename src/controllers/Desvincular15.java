@@ -1,11 +1,9 @@
 package controllers;
 
-public class Desvincular15 {
+import entity.Grupos;
 
-	public void desvincularGrupoOrientador() {
-		removerOrientador();
-	}
-	public void removerOrientador() {
+public class Desvincular15 {
+	public void desvincularGrupoOrientador(Grupos grupo) {
 		
 	}
 }

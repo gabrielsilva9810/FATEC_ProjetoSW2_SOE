@@ -1,16 +1,37 @@
 package entity;
 
-public class Orientador {
+import java.util.List;
+
+public class Orientador extends Usuario {
+	private int rp;
 	private String curriculo;
 	private String areaEspecializada;
 	private String cargo;
+	private List<IOrientador> orientador;
+	private List<ICursos> curso;
 //=====================================================================================
-	public Orientador(String curriculo, String areaEspecializada, String cargo) {
+	public Orientador() {
+		
+	}
+	
+	public Orientador(int rp, String curriculo, String areaEspecializada, String cargo,
+			          IOrientador orientador, ICursos curso) {
+		this.rp = rp;
 		this.curriculo = curriculo;
 		this.areaEspecializada = areaEspecializada;
 		this.cargo = cargo;
 	}
-//=====================================================================================
+	
+
+	//=====================================================================================
+	public final int getRp() {
+		return rp;
+	}
+
+	public final void setRp(int rp) {
+		this.rp = rp;
+	}
+	
 	public final String getCurriculo() {
 		return curriculo;
 	}
@@ -30,4 +51,21 @@ public class Orientador {
 	public final void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
+
+	public List<IOrientador> getOrientador() {
+		return orientador;
+	}
+
+	public void setOrientador(List<IOrientador> orientador) {
+		this.orientador = orientador;
+	}
+
+	public List<ICursos> getCurso() {
+		return curso;
+	}
+
+	public void setCurso(List<ICursos> curso) {
+		this.curso = curso;
+	}
+	
 }

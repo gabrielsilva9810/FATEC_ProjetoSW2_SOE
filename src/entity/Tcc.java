@@ -1,24 +1,66 @@
 package entity;
 
+import java.util.Date;
+
 public class Tcc {
 	private String tema;
-	private String justificativa;
+	private IRegras regra;
+	private String areaEstudo;
+	private String descricaoProj;
+	private Date dtUltimaAtualiza;
+	
 //=====================================================================================
-	public Tcc(String tema, String justificativa) {
+	public Tcc() {
+		
+	}
+
+	public Tcc(String tema, IRegras regra, String areaEstudo, String descricaoProj, Date dtUltimaAtualiza) {
 		this.tema = tema;
-		this.justificativa = justificativa;
+		this.regra = regra;
+		this.areaEstudo = areaEstudo;
+		this.descricaoProj = descricaoProj;
+		this.dtUltimaAtualiza = dtUltimaAtualiza;
 	}
 //=====================================================================================
-	public final String getTema() {
+
+	public String getTema() {
 		return tema;
 	}
-	public final void setTema(String tema) {
+
+	public void setTema(String tema) {
 		this.tema = tema;
 	}
-	public final String getJustificativa() {
-		return justificativa;
+
+	public IRegras getRegra() {
+		return regra;
 	}
-	public final void setJustificativa(String justificativa) {
-		this.justificativa = justificativa;
+
+	public void setRegra(IRegras regra) {
+		this.regra = regra;
 	}
+
+	public String getAreaEstudo() {
+		return areaEstudo;
+	}
+
+	public void setAreaEstudo(String areaEstudo) {
+		this.areaEstudo = areaEstudo;
+	}
+
+	public String getDescricaoProj() {
+		return descricaoProj;
+	}
+
+	public void setDescricaoProj(String descricaoProj) {
+		this.descricaoProj = descricaoProj;
+	}
+
+	public Date getDtUltimaAtualiza() {
+		return dtUltimaAtualiza;
+	}
+
+	public void setDtUltimaAtualiza(Date dtUltimaAtualiza) {
+		this.dtUltimaAtualiza = dtUltimaAtualiza;
+	}
+
 }

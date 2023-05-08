@@ -1,11 +1,14 @@
 package controllers;
 
+import entity.Aluno;
+
 public class InserirDesistTranc02 {
-	
-	public void gravarDadosAluno() {
-		
+	public Aluno consultarAluno(Aluno Aluno) {
+		return null;
 	}
-	public void consultaAluno() {
-		
+	public boolean gravarDados(Aluno aluno) {
+		AlunoController alunoCtrl = new AlunoController();
+		alunoCtrl.alterar(aluno);
+		return true;
 	}
 }

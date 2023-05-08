@@ -2,20 +2,14 @@ package controllers;
 
 public class RelatorioVinculos16 {
 	public void gerarRelatorioporAluno() {
-		consultarOrientador();
-		consultarVinculo();
+			
+		VinculoController vinculo = new VinculoController();
+		vinculo.carregarVinculo();
 	}
+	
 	public void gerarRelatorioporOrientador() {
-		consultarGrupo();
-		consultarVinculo();
-	}
-	public void consultarGrupo() {
-		
-	}
-	public void consultarVinculo() {
-		
-	}
-	public void consultarOrientador() {
-		
+
+		VinculoController vinculo = new VinculoController();
+		vinculo.carregarVinculo();
 	}
 }

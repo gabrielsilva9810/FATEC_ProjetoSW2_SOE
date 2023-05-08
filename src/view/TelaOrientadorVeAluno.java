@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
-import controllers.Desvincular15;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -77,8 +77,6 @@ public class TelaOrientadorVeAluno extends JFrame {
 	private JTextArea textArea;
 	private JComboBox comboBox_2;
 	private JTextField textField_4;
-	private JButton btnDeixarOrientao;
-	private JTextField textField_14;
 	
 // ====================================================================================================================================
 // ============================================================ TELA BASE =============================================================
@@ -356,12 +354,8 @@ public class TelaOrientadorVeAluno extends JFrame {
 				lblTemaDoTrabalho_4.setBounds(512, 106, 250, 17);
 				tabGrupo.add(lblTemaDoTrabalho_4);
 				
-				btnRegras = new JButton("Orientar");
-				btnRegras.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-					}
-				});
-				btnRegras.setBounds(20, 265, 82, 32);
+				btnRegras = new JButton("Orientar / Deixar Orientação");
+				btnRegras.setBounds(752, 263, 206, 32);
 				tabGrupo.add(btnRegras);
 				
 				lblTemaDoTrabalho_3 = new JLabel("Orientador");
@@ -459,33 +453,6 @@ public class TelaOrientadorVeAluno extends JFrame {
 				textArea = new JTextArea();
 				textArea.setBounds(10, 359, 949, 102);
 				tabGrupo.add(textArea);
-				
-				btnDeixarOrientao = new JButton("Deixar Orientação");
-				btnDeixarOrientao.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-					}
-				});
-				btnDeixarOrientao.setBounds(115, 265, 158, 32);
-				tabGrupo.add(btnDeixarOrientao);
-				
-				JLabel lblStatus_2_1 = new JLabel("Justificativa");
-				lblStatus_2_1.setBounds(283, 274, 143, 25);
-				tabGrupo.add(lblStatus_2_1);
-				
-				textField_14 = new JTextField();
-				textField_14.setColumns(10);
-				textField_14.setBounds(348, 271, 469, 20);
-				tabGrupo.add(textField_14);
-				
-				JButton btnConfirmar = new JButton("Confirmar");
-				btnConfirmar.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-					Desvincular15 desvincular15 = new Desvincular15();
-					desvincular15.desvincularGrupoOrientador();
-					}
-				});
-				btnConfirmar.setBounds(840, 268, 82, 32);
-				tabGrupo.add(btnConfirmar);
 				//----------------------------------------------------------------------------------------------------------------------------				
 			}
 }
