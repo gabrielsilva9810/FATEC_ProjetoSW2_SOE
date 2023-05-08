@@ -4,7 +4,7 @@ import entity.Aluno;
 import entity.Grupos;
 import entity.Orientador;
 
-public class ManterVinculo14 {
+public class CtrlManterVinculo {
 	public Orientador pesquisaOrientador(String nome) {
 		return null;
 	}

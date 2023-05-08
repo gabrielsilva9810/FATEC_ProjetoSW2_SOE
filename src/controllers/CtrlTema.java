@@ -5,7 +5,7 @@ import java.util.List;
 import entity.Aluno;
 import entity.Tcc;
 
-public class InserirTema11 {
+public class CtrlTema {
 	public List<Tcc> lerTemas() {
 		return null;
 	}

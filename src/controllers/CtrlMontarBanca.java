@@ -2,7 +2,7 @@ package controllers;
 
 import entity.Orientador;
 
-public class MontarBanca21 {
+public class CtrlMontarBanca {
 
     public void insereConvite(Orientador orientador) {
     	

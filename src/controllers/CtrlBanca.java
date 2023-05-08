@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import entity.Banca;
 import entity.Grupos;
 
-public class BancaController {
+public class CtrlBanca{
 
 	public void agendarBanca() {
 

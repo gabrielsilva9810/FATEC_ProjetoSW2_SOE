@@ -2,7 +2,7 @@ package controllers;
 
 import entity.Grupos;
 
-public class Desvincular15 {
+public class CtrlDesvincular {
 	public void desvincularGrupoOrientador(Grupos grupo) {
 		
 	}

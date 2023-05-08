@@ -4,7 +4,7 @@ import entity.Aluno;
 import entity.Grupos;
 import entity.Vinculo;
 
-public class CriarGrupos12 {
+public class CtrlGrupos {
 	public Vinculo consultaVinculo() {
 		return null;
 	}

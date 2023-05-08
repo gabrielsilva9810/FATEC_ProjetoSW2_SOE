@@ -6,7 +6,7 @@ import entity.Regras;
 import entity.Tcc;
 import entity.Template;
 
-public class Template07 {
+public class CtrlTemp {
 	public Regras verificarTCC(Tcc tcc) {
 		return null;
 	}
@@ -17,7 +17,6 @@ public class Template07 {
 		return null;
 	}
 	public void gravarTemplate(Regras regra) {
-		RegrasController regras = new RegrasController();
-		regras.novaRegra(null, 0, null, null);
+		
 	}
 }

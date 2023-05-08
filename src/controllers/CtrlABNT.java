@@ -6,7 +6,7 @@ import entity.Regras;
 import entity.Template;
 import entity.TiposTCC;
 
-public class Abnt09 {
+public class CtrlABNT {
 	
     public Regras procurarRegra(TiposTCC tipoTcc) {
 

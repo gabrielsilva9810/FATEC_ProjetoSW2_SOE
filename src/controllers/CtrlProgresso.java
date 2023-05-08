@@ -2,7 +2,7 @@ package controllers;
 
 import entity.Grupos;
 
-public class ExibirProgresso19 {
+public class CtrlProgresso {
 	public Grupos procurarGrupoNome(String nome) {
 		return null;
 	}

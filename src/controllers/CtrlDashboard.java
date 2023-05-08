@@ -5,7 +5,7 @@ import java.util.List;
 import entity.Cursos;
 import entity.Orientador;
 
-public class Dash20 {
+public class CtrlDashboard {
 	public List<Cursos> carregarCursos() {
 		return null;
 	}

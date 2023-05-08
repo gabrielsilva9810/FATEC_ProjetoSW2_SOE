@@ -2,12 +2,12 @@ package controllers;
 
 import entity.Aluno;
 
-public class InserirDesistTranc02 {
+public class CtrlInserirDesistTranc {
 	public Aluno consultarAluno(Aluno Aluno) {
 		return null;
 	}
 	public boolean gravarDados(Aluno aluno) {
-		AlunoController alunoCtrl = new AlunoController();
+		CtrlManterAluno alunoCtrl = new CtrlManterAluno();
 		alunoCtrl.alterar(aluno);
 		return true;
 	}

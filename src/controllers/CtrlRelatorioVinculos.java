@@ -1,15 +1,15 @@
 package controllers;
 
-public class RelatorioVinculos16 {
+public class CtrlRelatorioVinculos {
 	public void gerarRelatorioporAluno() {
 			
-		VinculoController vinculo = new VinculoController();
+		CtrlVinculo vinculo = new CtrlVinculo();
 		vinculo.carregarVinculo();
 	}
 	
 	public void gerarRelatorioporOrientador() {
 
-		VinculoController vinculo = new VinculoController();
+		CtrlVinculo vinculo = new CtrlVinculo();
 		vinculo.carregarVinculo();
 	}
 }
