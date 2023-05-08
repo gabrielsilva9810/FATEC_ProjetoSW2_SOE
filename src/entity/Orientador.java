@@ -15,11 +15,13 @@ public class Orientador extends Usuario {
 	}
 	
 	public Orientador(int rp, String curriculo, String areaEspecializada, String cargo,
-			          IOrientador orientador, ICursos curso) {
+			          List<IOrientador> orientador, List<ICursos> curso) {
 		this.rp = rp;
 		this.curriculo = curriculo;
 		this.areaEspecializada = areaEspecializada;
 		this.cargo = cargo;
+		this.orientador = orientador;
+		this.curso = curso;
 	}
 	
 
