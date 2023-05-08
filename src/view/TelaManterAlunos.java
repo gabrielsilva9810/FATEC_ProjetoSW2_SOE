@@ -1,6 +1,7 @@
 package view;
 
 
+import controllers.InserirDesistTranc02;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -122,7 +123,13 @@ public class TelaManterAlunos extends JFrame {
 		contentPane.add(textField);
 		
 		JButton btnRegras_1_2 = new JButton("");
-		btnRegras_1_2.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
+		btnRegras_1_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				InserirDesistTranc02 InserirDesistTranc02 = new InserirDesistTranc02();
+				InserirDesistTranc02.consultaAluno();
+			}
+		});
+		btnRegras_1_2.setIcon(new ImageIcon("E:\\FATEC_ProjetoSW2_SOE-master\\img\\lupa.png"));
 		btnRegras_1_2.setBounds(513, 134, 32, 32);
 		contentPane.add(btnRegras_1_2);
 		
@@ -136,7 +143,11 @@ public class TelaManterAlunos extends JFrame {
 		contentPane.add(textField_1);
 		
 		JButton btnRegras_1_2_1 = new JButton("");
-		btnRegras_1_2_1.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
+		btnRegras_1_2_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnRegras_1_2_1.setIcon(new ImageIcon("E:\\FATEC_ProjetoSW2_SOE-master\\img\\lupa.png"));
 		btnRegras_1_2_1.setBounds(723, 134, 32, 32);
 		contentPane.add(btnRegras_1_2_1);
 		
@@ -271,6 +282,16 @@ public class TelaManterAlunos extends JFrame {
 		JComboBox comboBox_1_1_1 = new JComboBox();
 		comboBox_1_1_1.setBounds(772, 193, 186, 22);
 		contentPane.add(comboBox_1_1_1);
+		
+		JButton btnGravar_2 = new JButton("Salvar");
+		btnGravar_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				InserirDesistTranc02 InserirDesistTranc02 = new InserirDesistTranc02();
+				InserirDesistTranc02.gravarDadosAluno();
+			}
+		});
+		btnGravar_2.setBounds(608, 286, 110, 32);
+		contentPane.add(btnGravar_2);
 		//----------------------------------------------------------------------------------------------------------------------------
 		
 		

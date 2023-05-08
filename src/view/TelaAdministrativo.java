@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
-
+import controllers.RelatorioVinculos16;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -231,11 +231,6 @@ public class TelaAdministrativo extends JFrame {
 				lblNomeDoGrupo.setBounds(216, 11, 491, 25);
 				tabPesquisa.add(lblNomeDoGrupo);
 				
-				JButton btnRegras_1_2 = new JButton("");
-				btnRegras_1_2.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
-				btnRegras_1_2.setBounds(716, 34, 32, 32);
-				tabPesquisa.add(btnRegras_1_2);
-				
 				JCheckBox chckbxNewCheckBox_1 = new JCheckBox("Professor");
 				chckbxNewCheckBox_1.setBounds(256, 68, 97, 23);
 				tabPesquisa.add(chckbxNewCheckBox_1);
@@ -244,6 +239,26 @@ public class TelaAdministrativo extends JFrame {
 				chckbxAlunos_1.setBounds(373, 68, 97, 23);
 				tabPesquisa.add(chckbxAlunos_1);
 				
+				
+				JButton btnRegras_1_2 = new JButton("");
+				btnRegras_1_2.addActionListener(new ActionListener() {
+					@SuppressWarnings("unused")
+					public void actionPerformed(ActionEvent e) {
+						
+						RelatorioVinculos16 RelatorioVinculos16 = new RelatorioVinculos16();
+						if (chckbxAlunos_1 != null) {
+							RelatorioVinculos16.gerarRelatorioporAluno();
+						}else {
+							RelatorioVinculos16.gerarRelatorioporOrientador();
+						}
+	
+					}
+				});
+				btnRegras_1_2.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
+				btnRegras_1_2.setBounds(716, 34, 32, 32);
+				tabPesquisa.add(btnRegras_1_2);
+				
+
 				JLabel lblFiltro = new JLabel("Filtro:");
 				lblFiltro.setHorizontalAlignment(SwingConstants.LEFT);
 				lblFiltro.setBounds(216, 70, 82, 19);

@@ -1,7 +1,7 @@
 package view;
 
 
-
+import controllers.HistAtividades17;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -246,15 +246,22 @@ public class TelaManterAdministrativo extends JFrame {
 		JCheckBox chckbxAlunos = new JCheckBox("Alunos");
 		chckbxAlunos.setBounds(787, 317, 68, 23);
 		contentPane.add(chckbxAlunos);
-		
-		JButton btnRegras_1_2 = new JButton("");
-		btnRegras_1_2.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
-		btnRegras_1_2.setBounds(622, 313, 32, 32);
-		contentPane.add(btnRegras_1_2);
-		
+				
 		JCheckBox chckbxAdministrativo = new JCheckBox("Administrativo");
 		chckbxAdministrativo.setBounds(864, 316, 94, 23);
 		contentPane.add(chckbxAdministrativo);
+		
+		JButton btnRegras_1_2 = new JButton("");
+		btnRegras_1_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HistAtividades17 histAtividades17 = new HistAtividades17();
+				histAtividades17.consultarAtividade(chckbxAdministrativo, chckbxAlunos, chckbxNewCheckBox);
+			}
+		});
+		btnRegras_1_2.setIcon(new ImageIcon("C:\\TEMP\\lupa.png"));
+		btnRegras_1_2.setBounds(622, 313, 32, 32);
+		contentPane.add(btnRegras_1_2);
+	
 		//----------------------------------------------------------------------------------------------------------------------------
 		
 		
