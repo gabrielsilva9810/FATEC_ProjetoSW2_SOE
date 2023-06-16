@@ -1,3 +1,4 @@
-/controllers/
+/bd/
 /entity/
-/view/
+/controllers/
+/IDesistenciaTrancamento.class
